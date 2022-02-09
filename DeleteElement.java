@@ -34,10 +34,14 @@ public class DeleteElement {
                 cnt++;
             }
         }
+        //có được arrTemp với lần lượt các phần tử là vị trí index, sau đó là giá trị thừa
         if(cnt>0) {
+            //cnt là số lượng các element muốn tìm
             indexOfTheElement = new int[cnt];
             for (int i = 0; i < cnt; i++) {
                 indexOfTheElement[i] = arrTemp[i]-i;
+                //gán giá trị cho mảng index nhằm mục đích xóa (không dùng cho mục đích khác được)
+                //lí do trừ i: mỗi khi xóa từ index 0 -> length thì index của các phần tử sau bị trừ 1
             }
         }else{
             indexOfTheElement=new int[1];
